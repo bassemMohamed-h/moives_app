@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class viewModelSearch extends ChangeNotifier{
+class ViewModelSearch extends ChangeNotifier{
   static String searchResult = '';
 
 

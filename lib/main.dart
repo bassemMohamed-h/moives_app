@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moives_app/screens/searchScreen/viewSearch.dart';
+import 'package:moives_app/screens/searchScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       routes:{
-        viewSearch.routeName:(_)=> viewSearch(),},
-      initialRoute: viewSearch.routeName,
+        searchScreen.routeName:(_)=> searchScreen(),},
+      initialRoute: searchScreen.routeName,
     );
   }
 }
