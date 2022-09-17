@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:moives_app/HomeFragments/home_body.dart';
 import 'package:moives_app/ThemeData.dart';
 
+import '../../Screens/searchScreen.dart';
+
 
 
 class Home extends StatefulWidget {
@@ -11,7 +13,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int selectedIndex = 0;
-  List pages = [HomeBody(), Search(), Browse(), WatchList()];
+  List pages = [HomeBody(), searchScreen(), Browse(), WatchList()];
 
   @override
   Widget build(BuildContext context) {
@@ -59,9 +61,35 @@ class _HomeState extends State<Home> {
   }
 }
 
-class Search {
+class Search extends StatelessWidget {
+  const Search({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.red,
+    );
+  }
 }
-class Browse {
+
+class Browse extends StatelessWidget {
+  const Browse({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.green,
+    );
+  }
 }
-class WatchList {
+
+class WatchList extends StatelessWidget {
+  const WatchList({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.blue,
+    );
+  }
 }

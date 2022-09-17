@@ -3,12 +3,15 @@ class Response {
   List<Movie>? results;
   late int totalPages;
   late int totalResults;
+  String? status_message;
+
 
   Response(
       {required this.page,
         this.results,
         required this.totalPages,
-        required this.totalResults});
+        required this.totalResults,
+        this.status_message});
 
   Response.fromJson(Map<String, dynamic> json) {
     if (json["page"] is int) this.page = json["page"];
@@ -18,6 +21,7 @@ class Response {
           : (json["results"] as List).map((e) => Movie.fromJson(e)).toList();
     if (json["total_pages"] is int) this.totalPages = json["total_pages"];
     if (json["total_results"] is int) this.totalResults = json["total_results"];
+    json["status_message"] = status_message;
   }
 
   Map<String, dynamic> toJson() {

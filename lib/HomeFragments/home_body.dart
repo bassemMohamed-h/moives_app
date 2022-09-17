@@ -6,7 +6,6 @@ import 'package:provider/provider.dart';
 import '../ViewModel/HomeVM.dart';
 import '../screens/Widgets.dart';
 
-
 class HomeBody extends StatelessWidget {
   const HomeBody({Key? key}) : super(key: key);
 
@@ -24,37 +23,36 @@ class HomeBody extends StatelessWidget {
           return homeProvider.isPopularLoading || homeProvider.isTopRatedLoading
               ? Widgets.loading(screenHeight, screenWidth)
               : SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                //most latest movie
-                Widgets.movieDetails(screenHeight, screenWidth,
-                    homeProvider.popular![0]!, homeProvider, true),
-                const SizedBox(
-                ),
-                //latest
-                Container(
-                  height: screenHeight * .5,
-                  child: OurListView(
-                      'New Releases', false, homeProvider.popular!),
-                ),
-                //space
-                Container(
-                  height: screenHeight * .03,
-                ),
-                //top rated
-                Container(
-                  height: screenHeight * .5,
-                  child: OurListView(
-                      'Recommended', true, homeProvider.topRated!),
-                ),
-                //space
-                Container(
-                  height: screenHeight * .03,
-                ),
-              ],
-            ),
-          );
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      //most latest movie
+                      Widgets.movieDetails(screenHeight, screenWidth,
+                          homeProvider.popular![0]!, homeProvider, true),
+                      const SizedBox(),
+                      //latest
+                      Container(
+                        height: screenHeight * .5,
+                        child: OurListView(
+                            'New Releases', false, homeProvider.popular!),
+                      ),
+                      //space
+                      Container(
+                        height: screenHeight * .03,
+                      ),
+                      //top rated
+                      Container(
+                        height: screenHeight * .5,
+                        child: OurListView(
+                            'Recommended', true, homeProvider.topRated!),
+                      ),
+                      //space
+                      Container(
+                        height: screenHeight * .03,
+                      ),
+                    ],
+                  ),
+                );
         });
   }
 }
