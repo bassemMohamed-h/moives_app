@@ -4,9 +4,6 @@ import 'package:moives_app/ViewModel/HomeVM.dart';
 import 'package:moives_app/models/Response.dart';
 import 'package:moives_app/screens/no_details_video.dart';
 
-
-
-
 class Widgets {
   static loading(double screenHeight, double screenWidth) {
     return Container(
@@ -34,7 +31,7 @@ class Widgets {
 
   static Widget movieDetails(
       double screenHeight, double screenWidth, Movie movie,
-      [HomeBodyVM? homeProvider, bool containMosstPopular = false]) {
+      [HomeBodyVM? homeProvider, bool containMostPopular = false]) {
     String languageCompleteWord(String movieLanguage) {
       return 'language : ${movieLanguage == 'es' ? 'spanish' : movieLanguage == 'en' ? 'english' : movieLanguage == 'hi' ? 'hindi' : movieLanguage == 'ar' ? 'arabic' : movieLanguage == 'fa' ? 'persian' : movieLanguage == 'fr' ? 'french' : movieLanguage} ';
     }
@@ -176,7 +173,7 @@ class Widgets {
     return Column(
       children: [
         //most popular cover
-        containMosstPopular ? mostPopularCover() : notPopularCover(),
+        containMostPopular ? mostPopularCover() : notPopularCover(),
         Padding(
           padding: EdgeInsets.only(
               top: screenWidth * .05, bottom: screenWidth * .05),

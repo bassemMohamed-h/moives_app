@@ -12,8 +12,13 @@ class HomeBodyVM extends ChangeNotifier {
   String popularErrorMess = '';
   Movie? mostPopular;
   HomeBodyVM() {
+    print('home body constructor is starting now');
     getPopular();
+    print('get popular is finished & popular length is : ${popular?.length}'
+        ' & most popular movie title is :,'
+        ' get top rated will be run');
     getTopRated();
+    print('get top rated is finished & popular length is : ${topRated?.length}');
   }
 
   changeIsPopularLoading(bool value) {
@@ -29,11 +34,13 @@ class HomeBodyVM extends ChangeNotifier {
   getPopular() async {
     changeIsPopularLoading(true);
     var res = await PopularSV.getPopularMovieList();
+    print('this is result for get popular : $res');
     if (res is List<Movie>?) {
       popular = res;
       mostPopular = popular![0];
     } else {
       popularErrorMess = res;
+      print('this is result for get popular value of popularErrorMess:');
     }
     changeIsPopularLoading(false);
   }

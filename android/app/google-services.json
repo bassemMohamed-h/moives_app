@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "333454459624",
+    "project_id": "movies-24f1a",
+    "storage_bucket": "movies-24f1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333454459624:android:bf15421b7f651a4b64bf5d",
+        "android_client_info": {
+          "package_name": "com.example.moives_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333454459624-fu8b83b83si1mq8cgpipi9q78eiuke7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7bfepU2WTQ2smRmsKG6tkSaYSMlLFirQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333454459624-fu8b83b83si1mq8cgpipi9q78eiuke7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
